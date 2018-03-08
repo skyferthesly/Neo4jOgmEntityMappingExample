@@ -25,7 +25,7 @@ class Person {
 
 object Test extends App {
   val configuration = new Configuration.Builder(new ClasspathConfigurationSource("ogm.properties")).build()
-  val sessionFactory = new SessionFactory(configuration, "com.certilytics.mapper", "com.certilytics.mapper.NeoModels")
+  val sessionFactory = new SessionFactory(configuration, "testdomain")
   val session = sessionFactory.openSession()
 
   val me = new Person("The", "Wizard")
