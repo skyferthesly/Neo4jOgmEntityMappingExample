@@ -1,6 +1,6 @@
 # Neo4jOgmEntityMappingExample
 
-This project displays an issue with loading persistent Entity Classes
+This project displays an [issue with the Neo4j OGM](https://github.com/neo4j/neo4j-ogm/issues/474) when loading persistent NodeEntity Classes
 
 To run:
 ```
