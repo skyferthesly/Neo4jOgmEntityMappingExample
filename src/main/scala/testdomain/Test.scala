@@ -6,7 +6,7 @@ import org.neo4j.ogm.annotation.{NodeEntity, Relationship, Id, GeneratedValue, G
 
 @NodeEntity
 class Person {
-  @GraphId
+  @Id
   @Property
   var id: java.lang.Long = _
 
@@ -23,11 +23,22 @@ class Person {
   }
 }
 
-object Test extends App {
-  val configuration = new Configuration.Builder(new ClasspathConfigurationSource("ogm.properties")).build()
-  val sessionFactory = new SessionFactory(configuration, "testdomain")
-  val session = sessionFactory.openSession()
+object Foo {
+  def main(args: Array[String]): Unit = {
+    val configuration = new Configuration.Builder(new ClasspathConfigurationSource("ogm.properties")).build()
+    val sessionFactory = new SessionFactory(configuration, "testdomain")
+    val session = sessionFactory.openSession()
 
-  val me = new Person("The", "Wizard")
-  session.save(me)
+    val me = new Person("The", "Wizard")
+    session.save(me)
+  }
 }
+
+//object Test extends App {
+//  val configuration = new Configuration.Builder(new ClasspathConfigurationSource("ogm.properties")).build()
+//  val sessionFactory = new SessionFactory(configuration, "testdomain")
+//  val session = sessionFactory.openSession()
+//
+//  val me = new Person("The", "Wizard")
+//  session.save(me)
+//}
