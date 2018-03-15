@@ -2,6 +2,9 @@
 
 This project displays an [issue with the Neo4j OGM](https://github.com/neo4j/neo4j-ogm/issues/474) when loading persistent NodeEntity Classes
 
+This branch `working_example` was an attempt to forego using the scala trait `App`, as it was suspected to be the issue.
+This `working_example` does not work.
+
 To run:
 ```
 git clone https://github.com/skyferthesly/Neo4jOgmEntityMappingExample
