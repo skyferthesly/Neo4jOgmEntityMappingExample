@@ -1,9 +1,11 @@
 # Neo4jOgmEntityMappingExample
 
+This branch `fast-classpath-scanner` in particular shows that 
+the underlying issue with the Neo OGM and Scala is **an outdated FastClasspathScanner**. Manually specifying the most
+up-to-date version of the scanner fixes the issue!!!
+
 This project displays an [issue with the Neo4j OGM](https://github.com/neo4j/neo4j-ogm/issues/474) when loading persistent NodeEntity Classes
 
-This branch `working_example` was an attempt to forego using the scala trait `App`, as it was suspected to be the issue.
-This `working_example` does not work.
 
 To run:
 ```
